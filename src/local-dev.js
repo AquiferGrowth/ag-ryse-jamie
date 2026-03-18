@@ -3,7 +3,7 @@ import Papa from 'papaparse';
 // Antigravity local dev environment
 console.log("Vite local development connected to Webflow HTML successfully!");
 
-document.addEventListener("DOMContentLoaded", () => {
+function initLocalDev() {
   fetch('/blogs.csv')
     .then(response => response.text())
     .then(csvText => {
@@ -25,7 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener("DOMContentLoaded", initLocalDev);
+} else {
+  initLocalDev();
+}
 
 function populateList(container, blogsToRender) {
   if (!container) return;
