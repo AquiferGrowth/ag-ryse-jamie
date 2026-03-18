@@ -29,179 +29,775 @@ background-repeat:no-repeat;
 .w-container {
     max-width: 100% !important;
 }
-.hero-heading-left{
-background: linear-gradient(180deg, #1A3D5C 0%, #163357 50%, #0F2541 100%);
+.hero-heading-left {
+    background: radial-gradient(circle at 100% 0%, rgba(18, 247, 214, 0.06) 0%, transparent 50%), 
+                linear-gradient(180deg, #1A3D5C 0%, #163357 50%, #0F2541 100%);
+    padding: 120px 0;
 }
-.hero-why{
-background: linear-gradient(180deg, #0F2541 0%, #163357 50%, #163357 100%);
+.hero-why {
+    background: radial-gradient(circle at 100% 0%, rgba(18, 247, 214, 0.04) 0%, transparent 60%),
+                linear-gradient(180deg, #0F2541 0%, #163357 50%, #163357 100%);
+}
+.hero-without-image {
+    background: radial-gradient(circle at 0% 100%, rgba(18, 247, 214, 0.03) 0%, transparent 50%),
+                #0F2541 !important;
+}
+.footer-dark-copy {
+    background: radial-gradient(circle at 50% 0%, rgba(18, 247, 214, 0.02) 0%, transparent 50%),
+                #0F2541 !important;
 }
 .w-nav-link.w--current {
     color: #FFFFFF !important;
-			text-decoration: none;       
-  border-bottom: 2px solid #FFFFFF; 
-  padding-bottom: 6px;
+    text-decoration: none;       
+    border-bottom: 2px solid #12f7d6 !important; 
+    padding-bottom: 6px;
     padding-left: 3px;
     padding-right: 3px;
 }
-.w-nav-link:hover{
+.nav-link {
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
     color: #FFFFFF !important;
+}
+.tech-tag {
+    background: rgba(18, 247, 214, 0.08);
+    border: 1px solid rgba(18, 247, 214, 0.2);
+    border-radius: 100px;
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.tech-tag-dot {
+    width: 8px;
+    height: 8px;
+    background: #12F7D6;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(18, 247, 214, 0.5);
+}
+.tech-tag-text {
+    color: #12F7D6;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+.hero_heading {
+    font-size: 108px !important;
+    line-height: 1.0 !important;
+    letter-spacing: -2.16px !important;
+    margin-bottom: 30px !important;
+}
+.page_text {
+    font-size: 26px !important;
+    line-height: 1.65 !important;
+    color: #B4C5D6 !important;
+    max-width: 570px !important;
+    margin-bottom: 40px !important;
+}
+.button-primary {
+    background-color: #12F7D6 !important;
+    color: #0F2541 !important;
+    border: none !important;
+    padding: 20px 40px !important;
+    font-size: 13px !important;
+    box-shadow: 0 8px 30px rgba(18, 247, 214, 0.25) !important;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+.button-primary:hover {
+    background-color: #0ed9bc !important;
+    transform: translateY(-2px);
+}
+.button-secondry {
+    background-color: transparent !important;
+    border: 2px solid rgba(180, 197, 214, 0.15) !important;
+    color: #FFFFFF !important;
+    padding: 18px 38px !important;
+    font-size: 13px !important;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+.button-secondry:hover {
+    background-color: rgba(180, 197, 214, 0.05) !important;
+    border-color: rgba(180, 197, 214, 0.3) !important;
+}
+.jamie-portrait-container {
+    position: relative;
+    width: 480px;
+    height: 480px;
+}
+.jamie-portrait-glow {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(18, 247, 214, 0.15) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: 0;
+}
+.jamie-portrait-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(18, 247, 214, 0.15);
+    z-index: 1;
+}
+.topic-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 12px;
+    width: 100%;
+    text-decoration: none;
+}
+.topic-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(18, 247, 214, 0.2);
+}
+.topic-icon-bg {
+    background: rgba(18, 247, 214, 0.08);
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.topic-icon-bg img {
+    width: 24px;
+    height: 24px;
+}
+.topic-title {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-family: 'Inter', sans-serif;
+}
+.topic-posts {
+    color: #6B7F96;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+.browse-topics-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.browse-topics-line {
+    width: 40px;
+    height: 2px;
+    background: #12F7D6;
+}
+.browse-topics-text {
+    color: #12F7D6;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.what-i-cover-heading {
+    font-family: 'Rufina', serif;
+    font-size: 84px;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 48px;
+    letter-spacing: -1.68px;
+}
+.blog-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.blog-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(18, 247, 214, 0.2);
+    transform: translateY(-8px);
+}
+.blog-card-img-wrapper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+.blog-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.blog-card:hover .blog-card-img {
+    transform: scale(1.05);
+}
+.blog-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 37, 65, 0.6) 0%, transparent 60%);
+}
+.blog-card-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #12F7D6;
+    color: #0F2541;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.blog-card-content {
+    padding: 28px;
+}
+.blog-card-title {
+    font-family: 'Rufina', serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+.blog-card-excerpt {
+    color: #8B9FB5;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.blog-card-meta {
+    color: #6B7F96;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.meta-dot {
+    width: 4px;
+    height: 4px;
+    background: #6B7F96;
+    border-radius: 50%;
+}
+.navbar {
+    background: rgba(22, 51, 87, 0.8) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: none !important;
+    padding: 24px 64px !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-logo-text {
+    font-family: 'Rufina', serif;
+    font-size: 46px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+}
+.navbar-logo-dot {
+    color: #12F7D6;
+}
+.nav-link {
+    font-family: 'Helvetica', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    color: #8B9FB5 !important;
+    padding: 0 !important;
+    margin-left: 40px !important;
+    position: relative;
+    text-decoration: none;
+}
+.nav-link.w--current {
+    color: #FFFFFF !important;
+    border-bottom: none !important;
+}
+.nav-link.w--current::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #12F7D6;
+}
+.footer-logo-text {
+    font-family: 'Rufina', serif;
+    font-size: 42px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+.footer-link {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #6B7F96 !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: #FFFFFF !important;
+}
+.footer-divider {
+    background: rgba(255, 255, 255, 0.06);
+    height: 1px;
+    width: 100%;
+    margin: 40px 0;
+}
+.footer-copyright {
+    color: #6B7F96;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive Utilities */
+.container-large {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 48px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.about-content {
+    flex: 1.2;
+}
+
+.topics-content {
+    flex: 1;
+}
+
+.topics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 32px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1100px) {
+    .hero_heading {
+        font-size: 80px !important;
+    }
+    .what-i-cover-heading {
+        font-size: 64px;
+    }
+    .jamie-portrait-container {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        padding: 20px 24px !important;
+    }
+    .hero-heading-left {
+        padding: 80px 0;
+    }
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-image-wrapper {
+        justify-content: center;
+    }
+    .page_text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-wrapper {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .featured-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container-large {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0;
+    }
+    .nav-menu {
+        justify-content: center;
+        width: 100%;
+    }
+    .nav-link {
+        margin: 0 15px !important;
+    }
+    .hero_heading {
+        font-size: 60px !important;
+        line-height: 1.1 !important;
+    }
+    .page_text {
+        font-size: 20px !important;
+    }
+    .what-i-cover-heading {
+        font-size: 48px;
+    }
+    .jamie-portrait-container {
+        width: 320px;
+        height: 320px;
+    }
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-dark-copy {
+        padding: 60px 24px 40px !important;
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center !important;
+        text-align: center;
+    }
+    .footer-links, .footer-socials {
+        justify-content: center;
+    }
+    .navbar-logo-text {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .hero_heading {
+        font-size: 48px !important;
+    }
+    .new_hflex {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .button-primary, .button-secondry {
+        width: 100%;
+        text-align: center;
+    }
+    .jamie-portrait-container {
+        width: 260px;
+        height: 260px;
+    }
+    .footer-links, .footer-socials {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 </style>
 </head>
 <body class="body body_bg">
   <section class="section navbar">
-    <div class="w-layout-hflex flex-block">
-      <a href="index.html" aria-current="page" class="w-inline-block w--current"><img src="images/Jamie-Logo.svg" loading="lazy" alt="" class="logo"></a>
-      <div data-animation="over-right" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-        <div class="w-container">
-          <nav role="navigation" class="nav-menu w-nav-menu">
-            <a href="index.html" aria-current="page" class="nav-link w-nav-link w--current">Home</a>
-            <a href="blogs.html" class="nav-link w-nav-link">Blogs</a>
-          </nav>
-          <div class="w-nav-button">
-            <div class="w-icon-nav-menu"></div>
-          </div>
-        </div>
-      </div>
+    <div class="container-large nav-container">
+      <a href="index.html" class="navbar-logo-text">Jamie<span class="navbar-logo-dot">.</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link w--current">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="blogs.html" class="nav-link">Blog</a>
+      </nav>
     </div>
   </section>
   <section class="hero-heading-left">
-    <div class="container">
-      <div class="hero-wrapper-copy">
-        <div class="hero-split-copy">
-          <div class="div_upper">
-            <div class="section_upper">• Tech Reviewer • NYC</div>
+    <div class="container-large">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <div class="tech-tag">
+            <div class="tech-tag-dot"></div>
+            <div class="tech-tag-text">Tech Reviewer • NYC</div>
           </div>
           <h1 class="hero_heading">Hey,<br>I’m Jamie.</h1>
           <p class="page_text">I test tech products in my NYC apartment and share what actually works. No sponsored fluff, just honest reviews from someone who values quality over hype.</p>
           <div class="w-layout-hflex new_hflex">
-            <a href="https://jamie-personal-blog.webflow.io/blog-posts/the-ultimate-work-from-home-setup-that-actually-works" class="button-primary w-button">Read My Reviews</a>
+            <a href="#" class="button-primary w-button">Read My Reviews</a>
             <a href="#" class="button-secondry w-button">About Me</a>
           </div>
         </div>
-        <div class="hero-split image_end"><img src="images/Container-26.png" loading="lazy" sizes="(max-width: 972px) 100vw, 972px" srcset="images/Container-26-p-500.png 500w, images/Container-26-p-800.png 800w, images/Container-26.png 972w" alt="" class="image-copy"></div>
+        <div class="hero-image-wrapper">
+          <div class="jamie-portrait-container">
+            <div class="jamie-portrait-glow"></div>
+            <img src="images/jamie-portrait.png" loading="lazy" alt="Jamie Portrait" class="jamie-portrait-img">
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section class="hero-why">
-    <div class="container">
-      <div class="hero-wrapper-2-copy">
-        <div class="new_hero_split1">
-          <div class="w-layout-hflex title_flex"><img src="images/Container-27.png" loading="lazy" alt="">
-            <p class="new_text">ABOUT</p>
+  <section class="hero-why" style="background: #0F1E2E !important;">
+    <div class="container-large" style="padding: 120px 0;">
+      <div class="about-wrapper">
+        <div class="about-content">
+          <div class="browse-topics-label">
+            <div class="browse-topics-line"></div>
+            <div class="browse-topics-text">ABOUT</div>
           </div>
-          <h2 class="new_page_heading_why">Why I Started This Blog</h2>
-          <p class="page_text-copy">I got tired of buying tech that looked great in marketing videos but fell flat in real life. So I started testing products myself, documenting what actually worked, and sharing honest takes with people who value authenticity over hype.</p>
-          <p class="page_text-copy">Living in a 650 sq ft NYC apartment means every purchase needs to earn its place. No room for gadgets that don&#x27;t deliver. That constraint became my superpower—I only recommend what survives real-world use.</p>
-          <p class="page_text-copy">This blog is for people who want real insights, not affiliate-driven recommendations. If you&#x27;re optimizing your space or upgrading your routine, you&#x27;re in the right place.</p>
+          <h2 class="what-i-cover-heading">Why I Started This Blog</h2>
+          <p class="page_text-copy" style="font-size: 21px; line-height: 1.8; color: #B4C5D6; margin-bottom: 28px;">I got tired of buying tech that looked great in marketing videos but fell flat in real life. So I started testing products myself, documenting what actually worked, and sharing honest takes with people who value authenticity over hype.</p>
+          <p class="page_text-copy" style="font-size: 21px; line-height: 1.8; color: #B4C5D6; margin-bottom: 28px;">Living in a 650 sq ft NYC apartment means every purchase needs to earn its place. No room for gadgets that don't deliver. That constraint became my superpower—I only recommend what survives real-world use.</p>
+          <p class="page_text-copy" style="font-size: 21px; line-height: 1.8; color: #B4C5D6;">This blog is for people who want real insights, not affiliate-driven recommendations. If you're optimizing your space or upgrading your routine, you're in the right place.</p>
         </div>
-        <div class="new_hero_split">
-          <div class="w-layout-hflex title_flex"><img src="images/Container-27.png" loading="lazy" alt="">
-            <p class="new_text">BROWSE TOPICS</p>
+        <div class="topics-content">
+          <div class="browse-topics-label">
+            <div class="browse-topics-line"></div>
+            <div class="browse-topics-text">BROWSE TOPICS</div>
           </div>
-          <h2 class="new_page_heading_why">What I Cover</h2>
-          <div class="w-layout-hflex green_card_with_icon"><img src="images/Container-28.png" loading="lazy" alt="" class="image-15">
-            <div class="w-layout-vflex v-flex_text_content">
-              <h2 class="card_text_main">Smart Home</h2>
-              <h2 class="card_text_secondry">24 Posts</h2>
-            </div>
-          </div>
-          <div class="w-layout-hflex green_card_with_icon"><img src="images/Container-29.png" loading="lazy" alt="" class="image-15">
-            <div class="w-layout-vflex v-flex_text_content">
-              <h2 class="card_text_main">Productivity</h2>
-              <h2 class="card_text_secondry">18 Posts</h2>
-            </div>
-          </div>
-          <div class="w-layout-hflex green_card_with_icon"><img src="images/Container-30.png" loading="lazy" alt="" class="image-15">
-            <div class="w-layout-vflex v-flex_text_content">
-              <h2 class="card_text_main">Tech Reviews</h2>
-              <h2 class="card_text_secondry">31 Posts</h2>
-            </div>
-          </div>
-          <div class="w-layout-hflex green_card_with_icon"><img src="images/Container-31.png" loading="lazy" alt="" class="image-15">
-            <div class="w-layout-vflex v-flex_text_content">
-              <h2 class="card_text_main">Urban Living</h2>
-              <h2 class="card_text_secondry">12 Posts</h2>
-            </div>
-          </div>
-          <div class="w-layout-hflex green_card_with_icon"><img src="images/Container-32.png" loading="lazy" alt="" class="image-15">
-            <div class="w-layout-vflex v-flex_text_content">
-              <h2 class="card_text_main">Condo Life</h2>
-              <h2 class="card_text_secondry">15 Posts</h2>
-            </div>
-          </div>
-          <div class="w-layout-hflex green_card_with_icon"><img src="images/Container-33.png" loading="lazy" alt="" class="image-15">
-            <div class="w-layout-vflex v-flex_text_content">
-              <h2 class="card_text_main">Honest Takes</h2>
-              <h2 class="card_text_secondry">28 Posts</h2>
-            </div>
+          <h2 class="what-i-cover-heading">What I Cover</h2>
+          <div class="topics-list">
+            <!-- Topic Card 1 -->
+            <a href="#" class="topic-card">
+              <div class="topic-icon-bg"><img src="images/topic-smart-home.svg" loading="lazy" alt="Smart Home"></div>
+              <div>
+                <div class="topic-title">Smart Home</div>
+                <div class="topic-posts">24 posts</div>
+              </div>
+            </a>
+            <!-- Topic Card 2 -->
+            <a href="#" class="topic-card">
+              <div class="topic-icon-bg"><img src="images/topic-productivity.svg" loading="lazy" alt="Productivity"></div>
+              <div>
+                <div class="topic-title">Productivity</div>
+                <div class="topic-posts">18 posts</div>
+              </div>
+            </a>
+            <!-- Topic Card 3 -->
+            <a href="#" class="topic-card">
+              <div class="topic-icon-bg"><img src="images/topic-tech-reviews.svg" loading="lazy" alt="Tech Reviews"></div>
+              <div>
+                <div class="topic-title">Tech Reviews</div>
+                <div class="topic-posts">31 posts</div>
+              </div>
+            </a>
+            <!-- Topic Card 4 -->
+            <a href="#" class="topic-card">
+              <div class="topic-icon-bg"><img src="images/topic-urban-living.svg" loading="lazy" alt="Urban Living"></div>
+              <div>
+                <div class="topic-title">Urban Living</div>
+                <div class="topic-posts">12 posts</div>
+              </div>
+            </a>
+            <!-- Topic Card 5 -->
+            <a href="#" class="topic-card">
+              <div class="topic-icon-bg"><img src="images/topic-condo-life.svg" loading="lazy" alt="Condo Life"></div>
+              <div>
+                <div class="topic-title">Condo Life</div>
+                <div class="topic-posts">15 posts</div>
+              </div>
+            </a>
+            <!-- Topic Card 6 -->
+            <a href="#" class="topic-card">
+              <div class="topic-icon-bg"><img src="images/topic-honest-takes.svg" loading="lazy" alt="Honest Takes"></div>
+              <div>
+                <div class="topic-title">Honest Takes</div>
+                <div class="topic-posts">28 posts</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
   <section class="hero-without-image">
-    <div class="container-3">
+    <div class="container-large" style="padding: 120px 0;">
       <div class="hero-wrapper-two">
-        <div class="w-layout-hflex title_flex"><img src="images/Container-27.png" loading="lazy" alt="" class="new_line">
-          <p class="new_text">Featured Work</p>
+        <div class="w-layout-hflex title_flex" style="align-items: center; gap: 12px; margin-bottom: 24px;">
+          <div style="width: 40px; height: 2px; background: #12F7D6;"></div>
+          <p class="new_text" style="color: #12F7D6; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;">Featured Work</p>
         </div>
-        <h2 class="page_heading-copy">Latest Review &amp; Blogs</h2>
-        <div class="w-layout-hflex results_block_main">
-          <div class="recent-right-list w-dyn-list">
-            <div role="list" class="collection-list-2-copy w-dyn-items">
-              <div role="listitem" class="collection-item-2 w-dyn-item">
-                <div class="blog-hero-card-left-copy">
-                  <div class="new_image_bg">
-                    <div class="w-layout-hflex new_flex_box">
-                      <h2 fs-list-field="title" class="blog_category w-dyn-bind-empty"></h2>
-                    </div>
-                  </div>
-                  <div class="blog-card-content-col-copy">
-                    <div class="blog-card-meta">
-                      <h2 fs-list-field="title" class="blog-card-post-title-copy w-dyn-bind-empty"></h2>
-                      <p data-truncate="120" fs-list-field="description" class="post-summary-copy rte-excerpt-copy w-dyn-bind-empty"></p>
-                    </div>
-                    <div class="divider-line"></div>
-                    <div class="w-layout-hflex read-blog-btn-copy">
-                      <div class="read-more-btn-copy w-dyn-bind-empty"></div>
-                      <a href="#" class="read-blog-btn-copy w-inline-block">
-                        <div class="code-embed-copy w-embed"><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#12F7D6" fill-opacity="0.08"></path>
-                            <path d="M17.7401 23L16.7557 22.0284L20.8082 17.9759H10.3125V16.5696H20.8082L16.7557 12.5298L17.7401 11.5455L23.4673 17.2727L17.7401 23Z" fill="#12F7D6"></path>
-                          </svg></div>
-                      </a>
-                    </div>
-                  </div>
+        <div class="featured-header">
+          <h2 class="page_heading-copy" style="font-family: 'Rufina', serif; font-size: 72px; color: #FFFFFF; line-height: 1.1; margin: 0; letter-spacing: -0.72px;">Latest Reviews & Insights</h2>
+          <a href="#" class="button-primary w-button">View All</a>
+        </div>
+        
+        <div class="blog-grid">
+          <!-- Blog Card 1 -->
+          <div class="blog-card">
+            <div class="blog-card-img-wrapper">
+              <img src="images/smart-home-blog.png" alt="Smart Home" class="blog-card-img">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-card-tag">Smart Home</div>
+            </div>
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">Building a Smart Home That Actually Works</h3>
+              <p class="blog-card-excerpt">After two years of trial and error, here's what I learned about creating a smart home setup that doesn't make you want to throw everything out the window.</p>
+              <div class="blog-card-footer">
+                <div class="blog-card-meta">
+                  Jan 28, 2026 <div class="meta-dot"></div> 8 min
                 </div>
+                <div class="arrow-circle">→</div>
               </div>
             </div>
-            <div class="w-dyn-empty">
-              <div>No items found.</div>
+          </div>
+          
+          <!-- Blog Card 2 -->
+          <div class="blog-card">
+            <div class="blog-card-img-wrapper">
+              <img src="images/minimal-desk-blog.png" alt="Productivity" class="blog-card-img">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-card-tag">Productivity</div>
+            </div>
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">My Minimal Desk Setup for Maximum Focus</h3>
+              <p class="blog-card-excerpt">Less is more. Here's how I stripped my workspace down to the essentials and actually got more done in the process.</p>
+              <div class="blog-card-footer">
+                <div class="blog-card-meta">
+                  Jan 15, 2026 <div class="meta-dot"></div> 6 min
+                </div>
+                <div class="arrow-circle">→</div>
+              </div>
             </div>
           </div>
-          <div>
-            <a href="blogs.html" class="button-primary w-button">View All</a>
+          
+          <!-- Blog Card 3 -->
+          <div class="blog-card">
+            <div class="blog-card-img-wrapper">
+              <img src="images/nyc-living-blog.png" alt="Urban Living" class="blog-card-img">
+              <div class="blog-card-overlay"></div>
+              <div class="blog-card-tag">Urban Living</div>
+            </div>
+            <div class="blog-card-content">
+              <h3 class="blog-card-title">Apartment Living in NYC: What I Wish I Knew</h3>
+              <p class="blog-card-excerpt">From noise-canceling strategies to making the most of 650 square feet, here are the lessons from my first year in a Manhattan apartment.</p>
+              <div class="blog-card-footer">
+                <div class="blog-card-meta">
+                  Dec 30, 2025 <div class="meta-dot"></div> 10 min
+                </div>
+                <div class="arrow-circle">→</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="footer-dark-copy">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-2-copy w-nav">
-      <div class="new_container"><img src="images/Jamie-Logo.svg" loading="lazy" alt="" class="logo-copy">
-        <nav role="navigation" class="nav-menu-2 w-nav-menu">
-          <a href="index.html" aria-current="page" class="nav-link-copy w-nav-link w--current">Home</a>
-          <a href="blogs.html" class="nav-link-copy-copy w-nav-link">Blogs</a>
-        </nav>
-        <nav role="navigation" class="nav-menu-2-copy w-nav-menu">
-          <a href="#" class="nav-link-copy-copy w-nav-link">INSTAGRAM</a>
-          <a href="#" class="new w-nav-link">FACEBOOK</a>
-        </nav>
+  <section class="footer-dark-copy" style="padding: 96px 64px 40px;">
+    <div class="container-large">
+      <div class="footer-top">
+        <div class="footer-logo-text">Jamie<span class="navbar-logo-dot">.</span></div>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="#" class="footer-link">About</a>
+          <a href="blogs.html" class="footer-link">Blog</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-link">Instagram</a>
+          <a href="#" class="footer-link">Facebook</a>
+        </div>
       </div>
-      <div class="divider-line"></div>
-      <div class="w-layout-blockcontainer container-16 w-container">
-        <div class="disclaimer-text">© 2026 Jamie. All rights reserved. No fluff, just honest takes.</div>
+      <div class="footer-divider"></div>
+      <div class="footer-copyright">
+        © 2026 Jamie. All rights reserved. No fluff, just honest takes.
       </div>
     </div>
   </section>
