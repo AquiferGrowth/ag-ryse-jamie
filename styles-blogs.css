@@ -46,11 +46,14 @@
       position: sticky;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 0 64px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 0 64px !important;
+      height: 70px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
       box-shadow: 0 3px 9px 3px rgba(0,0,0,0.2);
     }
 
@@ -61,6 +64,8 @@
       color: var(--white);
       letter-spacing: -0.5px;
       line-height: 1;
+      display: block !important;
+      margin: 0 !important;
     }
 
     .nav-logo span {
@@ -68,9 +73,11 @@
     }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 32px !important; /* Made gap 32px to match home page! */
+      margin: 0 !important;
     }
 
     .nav-links a {
