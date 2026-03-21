@@ -899,7 +899,35 @@
     function setFilter(el) {
       document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
       el.classList.add('active');
+      // Re-run search after filter change in case there's a search term
+      runSearch();
     }
+
+    // Live search — filters blog-card articles and the featured card by title + description
+    function runSearch() {
+      const query = document.getElementById('blog-search').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('article.blog-card, article.featured-card');
+
+      cards.forEach(card => {
+        const title = (card.querySelector('.blog-card-title, .featured-title') || {}).textContent || '';
+        const desc  = (card.querySelector('.blog-card-desc, .featured-desc')   || {}).textContent || '';
+        const match = !query || title.toLowerCase().includes(query) || desc.toLowerCase().includes(query);
+        card.style.display = match ? '' : 'none';
+
+        // Also hide/show the parent card-row if all its children are hidden
+        const row = card.closest('.card-row');
+        if (row) {
+          const anyVisible = [...row.querySelectorAll('article')].some(a => a.style.display !== 'none');
+          row.style.display = anyVisible ? '' : 'none';
+        }
+      });
+    }
+
+    // Wire up search input
+    document.getElementById('blog-search').addEventListener('input', runSearch);
+
+    // Wire up search button click
+    document.querySelector('.search-btn').addEventListener('click', runSearch);
   </script>
 
 </body>
