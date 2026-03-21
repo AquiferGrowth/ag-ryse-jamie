@@ -420,6 +420,15 @@
     /* ============================
        LOAD MORE BUTTON
     ============================ */
+    .no-results {
+      text-align: center;
+      padding: 80px 0 40px;
+      color: rgba(255,255,255,0.45);
+      font-family: var(--font-inter);
+      font-size: 18px;
+      font-weight: 400;
+    }
+
     .load-more-wrap {
       display: flex;
       justify-content: center;
@@ -866,8 +875,13 @@
 
     </div>
 
+    <!-- NO RESULTS -->
+    <div class="no-results" id="no-results" style="display:none;">
+      <p>No results found</p>
+    </div>
+
     <!-- LOAD MORE -->
-    <div class="load-more-wrap" style="padding: 20px 0 60px;">
+    <div class="load-more-wrap" style="padding: 20px 0 60px;" id="load-more-wrap">
       <a href="#" class="load-more-btn" id="load-more">Load More</a>
     </div>
 
@@ -907,12 +921,14 @@
     function runSearch() {
       const query = document.getElementById('blog-search').value.trim().toLowerCase();
       const cards = document.querySelectorAll('article.blog-card, article.featured-card');
+      let visibleCount = 0;
 
       cards.forEach(card => {
         const title = (card.querySelector('.blog-card-title, .card-title') || {}).textContent || '';
         const desc  = (card.querySelector('.blog-card-desc, .card-desc')   || {}).textContent || '';
         const match = !query || title.toLowerCase().includes(query) || desc.toLowerCase().includes(query);
         card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
 
         // Also hide/show the parent card-row if all its children are hidden
         const row = card.closest('.card-row');
@@ -921,6 +937,10 @@
           row.style.display = anyVisible ? '' : 'none';
         }
       });
+
+      // Toggle Load More and No Results based on visible count
+      document.getElementById('load-more-wrap').style.display = visibleCount > 0 ? '' : 'none';
+      document.getElementById('no-results').style.display    = visibleCount === 0 ? '' : 'none';
     }
 
     // Wire up search input
