@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (path === '/' || path === '/index.html') {
-    loadStyle('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/styles-home.css');
-    loadBody('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/body-home.html');
+    loadStyle('https://ag-ryse-jamie.pages.dev/styles-home.css');
+    loadBody('https://ag-ryse-jamie.pages.dev/body-home.html');
   } else if (path.startsWith('/blogs') || path.startsWith('/detail_blog')) {
-    loadStyle('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/styles-blogs.css');
-    loadBody('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/body-blogs.html');
+    loadStyle('https://ag-ryse-jamie.pages.dev/styles-blogs.css');
+    loadBody('https://ag-ryse-jamie.pages.dev/body-blogs.html');
   }
 });
