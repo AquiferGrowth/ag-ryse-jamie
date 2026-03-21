@@ -470,7 +470,7 @@
     .article-grid {
       display: flex;
       gap: 32px;
-      align-items: flex-start;
+      align-items: stretch;
     }
 
     .article-card {
@@ -482,6 +482,7 @@
       padding: 1px;
       display: flex;
       flex-direction: column;
+      height: 100%;
       transition: transform 0.2s, border-color 0.2s;
     }
     .article-card:hover {
@@ -539,6 +540,11 @@
       font-weight: 700;
       color: var(--white);
       line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      overflow: hidden;
     }
 
     .article-excerpt {
@@ -546,6 +552,11 @@
       font-weight: 400;
       color: var(--subdued);
       line-height: 1.7;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      line-clamp: 3;
+      overflow: hidden;
     }
 
     .article-footer {
@@ -553,7 +564,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 28px 28px;
-      margin-top: 12px;
+      margin-top: auto;
       padding-top: 12px;
       border-top: 1px solid rgba(255,255,255,0.06);
     }
