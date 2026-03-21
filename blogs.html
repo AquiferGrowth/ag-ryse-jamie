@@ -909,8 +909,8 @@
       const cards = document.querySelectorAll('article.blog-card, article.featured-card');
 
       cards.forEach(card => {
-        const title = (card.querySelector('.blog-card-title, .featured-title') || {}).textContent || '';
-        const desc  = (card.querySelector('.blog-card-desc, .featured-desc')   || {}).textContent || '';
+        const title = (card.querySelector('.blog-card-title, .card-title') || {}).textContent || '';
+        const desc  = (card.querySelector('.blog-card-desc, .card-desc')   || {}).textContent || '';
         const match = !query || title.toLowerCase().includes(query) || desc.toLowerCase().includes(query);
         card.style.display = match ? '' : 'none';
 
