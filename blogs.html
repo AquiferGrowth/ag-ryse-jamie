@@ -143,35 +143,14 @@
       display: flex;
       align-items: center;
       flex-wrap: nowrap;
-      gap: 0;
+      gap: 6px;
     }
 
-    /* "View all" pill — always has a filled background */
-    .pill-viewall {
-      font-family: var(--font-inter);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--white);
-      background: rgba(242, 242, 242, 0.12);
-      padding: 8px 20px;
-      border-radius: 32px;
-      cursor: pointer;
-      border: none;
-      white-space: nowrap;
-      margin-right: 8px;
-      transition: background 0.2s;
-      flex-shrink: 0;
-    }
-    .pill-viewall:hover,
-    .pill-viewall.active {
-      background: rgba(242, 242, 242, 0.2);
-    }
-
-    /* Category pills — plain text, no border or background */
+    /* All pills share the same base style */
     .pill {
       font-family: var(--font-inter);
-      font-size: 14px;
-      font-weight: 400;
+      font-size: 13px;
+      font-weight: 500;
       color: rgba(255,255,255,0.55);
       padding: 8px 18px;
       border-radius: 32px;
@@ -179,15 +158,19 @@
       border: none;
       background: transparent;
       white-space: nowrap;
-      transition: color 0.2s;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.3px;
     }
 
+    /* Active pill — filled background, same as original View All */
     .pill.active {
+      background: rgba(242, 242, 242, 0.14);
       color: var(--white);
       font-weight: 600;
     }
 
     .pill:hover:not(.active) {
+      background: rgba(242, 242, 242, 0.06);
       color: rgba(255,255,255,0.85);
     }
 
@@ -597,11 +580,11 @@
     <!-- CONTROLS: FILTER PILLS + SEARCH -->
     <div class="controls-section">
       <div class="filter-pills">
-        <button class="pill-viewall active" onclick="setFilter(this, true)">View all</button>
-        <button class="pill" onclick="setFilter(this, false)">Lighting &amp; Comfort</button>
-        <button class="pill" onclick="setFilter(this, false)">Automations &amp; Hacks</button>
-        <button class="pill" onclick="setFilter(this, false)">Smart Home Essentials</button>
-        <button class="pill" onclick="setFilter(this, false)">Reviews</button>
+        <button class="pill active" onclick="setFilter(this)">VIEW ALL</button>
+        <button class="pill" onclick="setFilter(this)">Lighting &amp; Comfort</button>
+        <button class="pill" onclick="setFilter(this)">Automations &amp; Hacks</button>
+        <button class="pill" onclick="setFilter(this)">Smart Home Essentials</button>
+        <button class="pill" onclick="setFilter(this)">Reviews</button>
       </div>
       <div class="search-bar">
         <input type="text" placeholder="Type here to search blog" id="blog-search" aria-label="Search blog posts">
@@ -912,10 +895,9 @@
   </footer>
 
   <script>
-    // Filter pill interaction
-    function setFilter(el, isViewAll) {
-      // Clear all active states
-      document.querySelectorAll('.pill, .pill-viewall').forEach(p => p.classList.remove('active'));
+    // Filter pill interaction — highlight the clicked pill
+    function setFilter(el) {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
       el.classList.add('active');
     }
   </script>
