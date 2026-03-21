@@ -1,0 +1,381 @@
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Jamie<span>.</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        
+        
+        <a href="blogs.html" class="active">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== PAGE BODY ==================== -->
+  <main class="page">
+
+    <!-- CONTROLS: FILTER PILLS + SEARCH -->
+    <div class="controls-section">
+      <div class="filter-pills">
+        <button class="pill active" onclick="setFilter(this)">View All</button>
+        <button class="pill" onclick="setFilter(this)">Lighting &amp; Comfort</button>
+        <button class="pill" onclick="setFilter(this)">Automations &amp; Hacks</button>
+        <button class="pill" onclick="setFilter(this)">Smart Home Essentials</button>
+        <button class="pill" onclick="setFilter(this)">Reviews</button>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Type here to search blog" id="blog-search" aria-label="Search blog posts">
+        <button class="search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+            <path d="M16.5 16.5L21 21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- FEATURED HERO CARD -->
+    <div class="featured-section">
+      <article class="featured-card" id="featured-post">
+        <div class="featured-card-img">
+          <img
+            src="images/blog-featured.png"
+            alt="Smart condo featuring elegantly integrated devices"
+            onerror="this.style.background='linear-gradient(135deg,#1a3d5c,#0f2541)'; this.style.minHeight='500px';"
+          >
+        </div>
+        <div class="featured-card-content">
+          <div class="card-meta-top">
+            <div class="card-info">
+              <span class="tag">Category</span>
+              <span class="read-time">5 min read</span>
+            </div>
+            <div class="card-title-group">
+              <h1 class="card-title">Tour My Smart Condo: 5 Devices That Actually Work (and Look Good Too)</h1>
+              <p class="card-desc">Step inside my Toronto condo to see 5 smart home devices that blend style with convenience, and actually make daily life easier.</p>
+            </div>
+          </div>
+          <a href="#" class="read-more-btn">
+            <span>Read more</span>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- BLOG CARD GRID -->
+    <div class="grid-section">
+
+      <!-- Row 1 -->
+      <div class="card-row">
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-1.png"
+              alt="Work from home desk setup with smart lighting"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">The Ultimate Work-from-Home Setup (That Actually Works)</h2>
+                <p class="blog-card-desc">WFH essentials go beyond just a desk and chair. Here's how lighting, mood, and smart automation can make your home office setup work with you.</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-2.png"
+              alt="Cheap smart tech gadgets comparison"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">Why I Don't Buy Cheap Smart Tech Anymore (TEMU/Amazon Burnout)</h2>
+                <p class="blog-card-desc">Skip the disposable gadgets. Here's why investing in quality smart home tech beats buying cheap gear that breaks, lags, and wastes your time.</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-3.png"
+              alt="RYSE vs Aura battery test"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">RYSE vs Aura: Battery Test Results After 3 Months</h2>
+                <p class="blog-card-desc">Tested in a real downtown condo, here's how the battery life on RYSE SmartShade stacks up against Aura after 3 months of daily use.</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card-row">
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-4.png"
+              alt="Smart condo automations"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">My Condo Is Smarter Than Me: 7 Automations I Didn't Know I Needed</h2>
+                <p class="blog-card-desc">From blinds that move with the sun to lights that set the mood, these 7 smart automations make...</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-5.png"
+              alt="Smart lighting for small spaces"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">The Best Smart Lighting for Small Spaces in 2025</h2>
+                <p class="blog-card-desc">Lighting is more than just a vibe. Here are the best smart lighting options for condos and small...</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-6.png"
+              alt="Standing desk vs fixed desk in condo office"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">Standing Desks vs. Fixed Desks: What's Worth It in a Condo Office?</h2>
+                <p class="blog-card-desc">I tested standing and fixed desks in my Toronto condo office. Here's what actually makes a...</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 3 (2 cards only) -->
+      <div class="card-row" style="max-width: 874px;">
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-7.png"
+              alt="Smart plugs and sensors"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">Best Smart Plugs and Sensors for Everyday Automations</h2>
+                <p class="blog-card-desc">From coffee makers to climate control, smart plugs and sensors keep my condo running smoothly....</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-img">
+            <img
+              src="images/blog-card-8.png"
+              alt="Noise control in condos: headphones and soundproofing"
+              onerror="this.style.background='linear-gradient(135deg,#1e4060,#162d45)'; this.style.display='block';"
+            >
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <div class="card-info">
+                <span class="tag pill-shape">Category</span>
+                <span class="read-time">5 min read</span>
+              </div>
+              <div class="blog-card-title-group">
+                <h2 class="blog-card-title">Noise Control in Condos: Headphones, Soundproofing, and Smart Fixes</h2>
+                <p class="blog-card-desc">City noise is real. Here's how I block it out in my downtown condo with the best head...</p>
+              </div>
+            </div>
+            <a href="#" class="read-more-btn">
+              <span>Read more</span>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.707 16.95L15.414 11.243L9.707 5.536L8.293 6.95L12.586 11.243L8.293 15.536L9.707 16.95Z" fill="#d9d9d9"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- NO RESULTS -->
+    <div class="no-results" id="no-results" style="display:none;">
+      <p>No results found</p>
+    </div>
+
+    <!-- LOAD MORE -->
+    <div class="load-more-wrap" style="padding: 20px 0 60px;" id="load-more-wrap">
+      <a href="#" class="load-more-btn" id="load-more">Load More</a>
+    </div>
+
+  </main>
+
+  <!-- ==================== FINAL THOUGHT ==================== -->
+  <section class="final-thought">
+    <div class="final-thought-inner">
+      <h2>Final Thought</h2>
+      <p class="final-thought-text">
+        This kit covers the essentials: lighting, shades, climate, automation, and audio. It's not about buying every gadget — it's about picking the ones that actually make life smoother in a small space.<br><br>
+        If you're just starting out, grab smart plugs and bulbs first. Add RYSE SmartShade when you're ready to make a bigger impact. In a condo, the right five devices can make your space feel less like an apartment and more like a home that's working with you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-link">Home</a>
+      
+      <a href="#" class="footer-link">Contact</a>
+      <a href="blogs.html" class="footer-link">Blog</a>
+    </div>
+  </footer>
+
+  <script>
+    // Filter pill interaction — highlight the clicked pill
+    function setFilter(el) {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      // Re-run search after filter change in case there's a search term
+      runSearch();
+    }
+
+    // Live search — filters blog-card articles and the featured card by title + description
+    function runSearch() {
+      const query = document.getElementById('blog-search').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('article.blog-card, article.featured-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const title = (card.querySelector('.blog-card-title, .card-title') || {}).textContent || '';
+        const desc  = (card.querySelector('.blog-card-desc, .card-desc')   || {}).textContent || '';
+        const match = !query || title.toLowerCase().includes(query) || desc.toLowerCase().includes(query);
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+
+        // Also hide/show the parent card-row if all its children are hidden
+        const row = card.closest('.card-row');
+        if (row) {
+          const anyVisible = [...row.querySelectorAll('article')].some(a => a.style.display !== 'none');
+          row.style.display = anyVisible ? '' : 'none';
+        }
+      });
+
+      // Toggle Load More and No Results based on visible count
+      document.getElementById('load-more-wrap').style.display = visibleCount > 0 ? '' : 'none';
+      document.getElementById('no-results').style.display    = visibleCount === 0 ? '' : 'none';
+    }
+
+    // Wire up search input
+    document.getElementById('blog-search').addEventListener('input', runSearch);
+
+    // Wire up search button click
+    document.querySelector('.search-btn').addEventListener('click', runSearch);
+  </script>
+
