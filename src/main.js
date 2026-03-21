@@ -1,26 +1,39 @@
 import './style.css';
-import './design-system.css';
-
-// --------------------------------------------------------------------------
-// Inject CSS stylesheet into Webflow page
-// --------------------------------------------------------------------------
-// Webflow only loads app.js via the footer script tag.
-// This injects the companion CSS file so styles reach the live site too.
-(function() {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'https://ag-ryse-jamie.pages.dev/app.css';
-  document.head.appendChild(link);
-})();
-
-// --------------------------------------------------------------------------
-// Custom Interactivity Code
-// --------------------------------------------------------------------------
-// Anything you write below this line will be bundled, optimized, and 
-// hosted securely for your Webflow site! This code is totally safe for SEO
-// natively.
 
 console.log("Antigravity custom interactions loaded onto Webflow!");
 
-// Example interaction: (You can delete this later or replace with real logic)
-// document.querySelectorAll('.button').forEach(btn => btn.addEventListener('click', () => { ... }));
+// Prevent old scripts from running if they were cached
+document.querySelectorAll('script[src*="replace_home_body"], script[src*="replace_blog_body"]').forEach(s => s.remove());
+
+document.addEventListener('DOMContentLoaded', () => {
+  const path = window.location.pathname;
+
+  function loadStyle(url) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url + '?v=' + Date.now();
+    document.head.appendChild(link);
+  }
+
+  function loadBody(url) {
+    fetch(url + '?v=' + Date.now())
+      .then(r => r.text())
+      .then(html => {
+        document.body.innerHTML = html;
+        if (window.Webflow) {
+          window.Webflow.destroy();
+          window.Webflow.ready();
+          window.Webflow.require('ix2').init();
+        }
+      })
+      .catch(err => console.error("Error loading body:", err));
+  }
+
+  if (path === '/' || path === '/index.html') {
+    loadStyle('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/styles-home.css');
+    loadBody('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/body-home.html');
+  } else if (path.startsWith('/blogs') || path.startsWith('/detail_blog')) {
+    loadStyle('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/styles-blogs.css');
+    loadBody('https://cdn.jsdelivr.net/gh/AquiferGrowth/ag-ryse-jamie@main/body-blogs.html');
+  }
+});
